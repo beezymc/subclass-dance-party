@@ -27,7 +27,24 @@ $(document).ready(function() {
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
+
+    window.dancers.push(dancer);
+
     $('body').append(dancer.$node);
+  });
+  $('.addLineupButton').on('click', function(event) {
+    for (let i = 0; i < window.dancers.length; i++) {
+      console.log(window.dancers[i]);
+      window.dancers[i].lineup();
+    }
+    // make a dancer with a random position
+
+    // var dancer = new dancerMakerFunction(
+    //   $("body").height() * Math.random(),
+    //   $("body").width() * Math.random(),
+    //   Math.random() * 1000
+    // );
+    // $('body').append(dancer.$node);
   });
 });
 

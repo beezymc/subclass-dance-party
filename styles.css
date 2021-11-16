@@ -25,3 +25,58 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+
+.makeMichaelDancer {
+  border: 5px solid black;
+  border-radius: 5px;
+  height: 90px;
+  width: 100px;
+}
+
+.makeMichaelDancer img {
+  height: 100%;
+  width: 100%;
+}
+
+.rotate {
+  animation: rotation 200ms 1 linear;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
+
+.slide {
+  animation: slide 0.5s forwards;
+  animation-delay: 2s;
+}
+
+@keyframes slide {
+  75% { left: 0; }
+}
+
+.makeShakiraDancer {
+  border: 5px solid gold;
+  border-radius: 5px;
+  transition: left-to-right 1s ease-in;
+  animation: left-to-right 1s ease-in forwards;
+};
+
+@keyframes left-to-right {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+
+
+/* .makeShakiraDancer img {
+  width: 100px;
+  height: 100px;
+} */
+
