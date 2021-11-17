@@ -30,5 +30,15 @@ describe('michaelDancer', function() {
       clock.tick(timeBetweenSteps);
       expect(michaelDancer.step.callCount).to.be.equal(2);
     });
+
+    it('moverandomizer is called whenever step is called', function () {
+      sinon.spy(michaelDancer, 'moveRandomizer');
+      expect(michaelDancer.moveRandomizer.callCount).to.be.equal(0);
+      michaelDancer.step();
+      michaelDancer.step();
+      expect(michaelDancer.moveRandomizer.callCount).to.be.equal(1);
+      michaelDancer.step();
+      expect(michaelDancer.moveRandomizer.callCount).to.be.equal(2);
+    });
   });
 });

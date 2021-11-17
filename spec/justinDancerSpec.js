@@ -19,6 +19,13 @@ describe('justinDancer', function() {
   });
 
   describe('dance', function() {
+
+    it('a rotate class should be toggled onto justinDancer when moused over', function() {
+      sinon.spy(justinDancer.$node, 'toggleClass');
+      justinDancer.$node.trigger('mouseover');
+      expect(justinDancer.$node.toggleClass.called).to.be.true;
+    });
+
     it('should call step at least once per second', function() {
       sinon.spy(justinDancer, 'step');
       expect(justinDancer.step.callCount).to.be.equal(0);
@@ -30,5 +37,7 @@ describe('justinDancer', function() {
       clock.tick(timeBetweenSteps);
       expect(justinDancer.step.callCount).to.be.equal(2);
     });
+
+
   });
 });

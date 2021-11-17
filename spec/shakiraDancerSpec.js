@@ -12,11 +12,15 @@ describe('shakiraDancer', function() {
     expect(shakiraDancer.$node).to.be.an.instanceof(jQuery);
   });
 
-  it('should have a step function that makes its node blink', function() {
-    sinon.spy(shakiraDancer.$node, 'toggle');
-    shakiraDancer.step();
-    expect(shakiraDancer.$node.toggle.called).to.be.true;
-  });
+  // it('should have a ', function() {
+  //   expect(shakiraDancer.$node.walk).to.include(css);
+  // })
+
+  // it('should have a step function that makes its node blink', function() {
+  //   sinon.spy(shakiraDancer.$node, 'toggle');
+  //   shakiraDancer.step();
+  //   expect(shakiraDancer.$node.toggle.called).to.be.true;
+  // });
 
   describe('dance', function() {
     it('should call step at least once per second', function() {

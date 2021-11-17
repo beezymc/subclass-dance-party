@@ -22,14 +22,6 @@ $(document).ready(function() {
 
     // make a dancer with a random position
 
-    // var heightRandomizer = function() {
-    //   let testHeight = $("body").height() * Math.random();
-    //   while (testHeight < 32 || testHeight > $("body").height - 50) {
-    //     testHeight = $("body").height() * Math.random();
-    //   }
-    //   return testHeight;
-    // };
-    // console.log(heightRandomizer(), $("body").height());
     var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
@@ -67,7 +59,6 @@ $(document).ready(function() {
         let currOther = others[j];
         let otherCoords = currOther.$node.offset();
         if (100 > Math.abs(brittCoords.top - otherCoords.top) && 100 > Math.abs(brittCoords.left - otherCoords.left)) {
-          console.log("trigger");
           currBritt.bounceInRandomDirection();
         }
       }

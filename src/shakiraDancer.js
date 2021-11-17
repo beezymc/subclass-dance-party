@@ -15,10 +15,10 @@ makeShakiraDancer.prototype.walk = function (context) {
 
 makeShakiraDancer.prototype.bounce = function (context) {
   let currTop = parseInt(context.$node.css("top"));
-  // if (currTop <= 0) {
-  //   currTop = "90%";
-  //   context.$node.css({ top: currTop });
-  // }
+  if (currTop <= 0) {
+    currTop = "80%";
+    context.$node.css({ top: currTop });
+  }
 };
 
 makeShakiraDancer.prototype.moveRandomizer = function(context) {
