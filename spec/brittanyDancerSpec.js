@@ -12,6 +12,10 @@ describe('brittanyDancer', function() {
     expect(brittanyDancer.$node).to.be.an.instanceof(jQuery);
   });
 
+  it('should have an image appended', function () {
+    expect($('img')).to.exist;
+  });
+
   // it('should have a step function that makes its node blink', function() {
   //   sinon.spy(brittanyDancer.$node, 'toggle');
   //   brittanyDancer.step();

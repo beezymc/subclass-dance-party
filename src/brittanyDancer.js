@@ -11,12 +11,10 @@ makeBrittanyDancer.prototype.bounceInRandomDirection = function () {
   let currTop = parseInt(this.$node.css("top"));
   var moveLeft = function (currLeft, currTop, context) {
     currLeft -= 200;
-    console.log("Left", currLeft);
     context.$node.css({left: currLeft + "px" });
   };
   var moveRight = function (currLeft, currTop, context) {
     currLeft += 200;
-    console.log("Right", currLeft);
     context.$node.css({left: currLeft + "px" });
   };
   var moveUp = function (currLeft, currTop, context) {
